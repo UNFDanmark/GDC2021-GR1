@@ -17,6 +17,13 @@ public class MoveUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Moves up at the given speed
         myTrans.position += new Vector3(0, moveUpSpeed * Time.deltaTime, 0);
+
+        // If completely out of view, destroy self
+        if (myTrans.position.y >= 10 + myTrans.localScale.y)
+        {
+            Destroy(gameObject);
+        }
     }
 }

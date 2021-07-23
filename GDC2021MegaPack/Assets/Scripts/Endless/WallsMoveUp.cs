@@ -29,12 +29,6 @@ public class WallsMoveUp : MonoBehaviour
             SpawnWalls();
             hasSpawnedExtra = true;
         }
-
-        // If completely out of view, destroy self
-        if (myTrans.position.y >= 10 + myTrans.localScale.y)
-        {
-            Destroy(gameObject);
-        }
     }
 
     void SpawnWalls()

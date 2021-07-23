@@ -6,12 +6,15 @@ public class Submarine : MonoBehaviour
 {
     private Rigidbody subRB;
 
+    private Transform subTrans;
+
     public float moveSpeed = 5f;
 
     // Start is called before the first frame update
     void Start()
     {
         subRB = gameObject.GetComponent<Rigidbody>();
+        subTrans = gameObject.GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -42,10 +45,12 @@ public class Submarine : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
+            subTrans.rotation = Quaternion.Euler(0, 0, 90);
             subRB.velocity += new Vector3(moveSpeed, 0, 0);
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
+            subTrans.rotation = Quaternion.Euler(0, 180, 90);
             subRB.velocity += new Vector3(-moveSpeed, 0, 0);
         }
     }

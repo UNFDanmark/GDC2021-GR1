@@ -91,12 +91,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1499163207722572862}
   - component: {fileID: 5358129072686095520}
+  - component: {fileID: 4306239582589078827}
   - component: {fileID: 8710841841397092846}
   - component: {fileID: 5424274764717826475}
   - component: {fileID: 4031525266474201714}
   - component: {fileID: 5739607486476799167}
   - component: {fileID: 4224408018271907086}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lobster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,6 +134,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSpeed: 1
   maxSpeed: 1.5
+--- !u!114 &4306239582589078827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5967318838417695863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 756464cee2e1dcf459c7b02d6cae5342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmgAmount: 1
 --- !u!114 &8710841841397092846
 MonoBehaviour:
   m_ObjectHideFlags: 0
