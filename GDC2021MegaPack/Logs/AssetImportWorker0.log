@@ -141,3 +141,35 @@ Received Import Request.
 Start importing Assets/Tree.prefab using Guid(98f33dcac82c86043ab6907c839d943c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e18d6ff1db78aeb9ad9a20272c0763a') in 0.795254 seconds 
   Import took 0.806825 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 265.346301 seconds.
+  path: Assets/Tree_Textures
+  artifactKey: Guid(5c35add98dbaffc4892f3390ee5515c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tree_Textures using Guid(5c35add98dbaffc4892f3390ee5515c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd71ee46e48e64639cac56d2c90785b5') in 0.015455 seconds 
+  Import took 0.031078 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 54.788012 seconds.
+  path: Assets/Prefabs/Obstacles/Lobster.prefab
+  artifactKey: Guid(06038f1ec642389458eee7b0947c2ee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Obstacles/Lobster.prefab using Guid(06038f1ec642389458eee7b0947c2ee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72478a96677eba8377eaa69c562011bd') in 0.052235 seconds 
+  Import took 0.065608 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.452351 seconds.
+  path: Assets/Prefabs/Player
+  artifactKey: Guid(0006f777e26d1b24981a6c4096fa089f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player using Guid(0006f777e26d1b24981a6c4096fa089f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b6a2a318137e3f203050dd2747453f0') in 0.018286 seconds 
+  Import took 0.033836 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 37.698233 seconds.
+  path: Assets/Scenes/SubmarineScene.unity
+  artifactKey: Guid(9e0c09b528676f74db934ef464ae1e3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SubmarineScene.unity using Guid(9e0c09b528676f74db934ef464ae1e3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '911b0307ce1c8f02dc8309abe0e373ea') in 0.017750 seconds 
+  Import took 0.032385 seconds .
+

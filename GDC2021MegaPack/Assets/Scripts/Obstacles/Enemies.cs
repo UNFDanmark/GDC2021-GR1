@@ -29,12 +29,32 @@ public class Enemies : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (lobTrans.position.x < 10.5f && moveRight)
+        {
+            moveRight = false;
+        }
+        else if (lobTrans.position.x > -10.5f && !moveRight)
+        {
+            moveRight = true;
+        }
 
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (moveRight)
+        {
+            lobTrans.rotation = Quaternion.Euler(0, 180, 90);
+            lobsterRB.velocity = new Vector3(moveSpeed, 0, 0);
+        }
+        else
+        {
+            lobTrans.rotation = Quaternion.Euler(0, 0, 90);
+            lobsterRB.velocity = new Vector3(-moveSpeed, 0, 0);
+        }
+
+        /*
         while (lobTrans.position.x < 10.5f && moveRight)
         {
             lobTrans.rotation = Quaternion.Euler(0, 180, 90);
@@ -50,5 +70,6 @@ public class Enemies : MonoBehaviour
         }
 
         moveRight = true;
+        */
     }
 }
