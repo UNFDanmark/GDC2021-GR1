@@ -6,22 +6,22 @@ public class MoveUp : MonoBehaviour
 {
     public float moveUpSpeed = 0.25f;
 
-    private Transform myTrans;
+    private Transform myTransform;
 
     // Start is called before the first frame update
     void Start()
     {
-        myTrans = gameObject.GetComponent<Transform>();
+        myTransform = gameObject.GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
         // Moves up at the given speed
-        myTrans.position += new Vector3(0, moveUpSpeed * Time.deltaTime, 0);
+        myTransform.position += new Vector3(0, moveUpSpeed * Time.deltaTime, 0);
 
         // If completely out of view, destroy self
-        if (myTrans.position.y >= 10 + myTrans.localScale.y)
+        if (myTransform.position.y >= 10 + myTransform.localScale.y)
         {
             Destroy(gameObject);
         }

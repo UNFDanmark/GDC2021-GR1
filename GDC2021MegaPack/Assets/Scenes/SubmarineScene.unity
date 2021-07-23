@@ -678,7 +678,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c2dd8601cae7d44975dac52a9bacdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lobster: {fileID: 0}
+  lobster: {fileID: 5967318838417695863, guid: 06038f1ec642389458eee7b0947c2ee7, type: 3}
+  minWait: 14
+  maxWait: 20
 --- !u!4 &1620673515
 Transform:
   m_ObjectHideFlags: 0
@@ -821,7 +823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 887c712943b5b5e43a72b39b607e3e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 1
 --- !u!114 &2024724395
 MonoBehaviour:
   m_ObjectHideFlags: 0

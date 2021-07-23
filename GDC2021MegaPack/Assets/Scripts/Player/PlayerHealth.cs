@@ -14,20 +14,17 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void TakeDamage(int dmgAmount)
     {
+        // Removes the damage amount from health
         currentHealth -= dmgAmount;
+
+        // If 0 health or below, run death script
         if (currentHealth <= 0)
         {
             Death();
         }
-        else if (currentHealth > maxHealth)
+        else if (currentHealth > maxHealth) // If more than max health, set to max health
         {
             currentHealth = maxHealth;
         }
@@ -35,7 +32,9 @@ public class PlayerHealth : MonoBehaviour
 
     void Death()
     {
+        // Stop time
         Time.timeScale = 0;
+        // Destroy submarine
         Destroy(gameObject);
     }
 }

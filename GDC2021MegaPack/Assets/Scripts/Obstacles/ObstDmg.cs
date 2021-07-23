@@ -15,12 +15,6 @@ public class ObstDmg : MonoBehaviour
         enemyRB = gameObject.GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnCollisionEnter(Collision collision)
     {
         // Fortæller playerHealth at den skal tage skade

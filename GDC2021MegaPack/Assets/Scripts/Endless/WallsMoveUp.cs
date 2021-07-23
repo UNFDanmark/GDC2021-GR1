@@ -6,7 +6,7 @@ public class WallsMoveUp : MonoBehaviour
 {
     public GameObject[] walls;
 
-    private Transform myTrans;
+    private Transform myTransform;
 
     bool hasSpawnedExtra = false;
 
@@ -14,17 +14,17 @@ public class WallsMoveUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        myTrans = gameObject.GetComponent<Transform>();
+        myTransform = gameObject.GetComponent<Transform>();
 
         // Moves wall half its height down
-        myTrans.position -= new Vector3(0, myTrans.localScale.y / 2, 0);
+        myTransform.position -= new Vector3(0, myTransform.localScale.y / 2, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
         // Spawn a new wall when at -50 y
-        if (myTrans.position.y >= -50 && !hasSpawnedExtra)
+        if (myTransform.position.y >= -50 && !hasSpawnedExtra)
         {
             SpawnWalls();
             hasSpawnedExtra = true;
@@ -37,7 +37,7 @@ public class WallsMoveUp : MonoBehaviour
         int wallNum = Random.Range(0, walls.Length);
 
         // Spawns the next wall
-        Instantiate(walls[wallNum], new Vector3(0, myTrans.position.y - myTrans.localScale.y / 2, 0), myTrans.rotation);
+        Instantiate(walls[wallNum], new Vector3(0, myTransform.position.y - myTransform.localScale.y / 2, 0), myTransform.rotation);
 
         // i må godt slette wall spawner :D
     }
