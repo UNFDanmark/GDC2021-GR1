@@ -12,6 +12,8 @@ public class Enemies : MonoBehaviour
 
     private float moveSpeed = 1.25f;
 
+    public float seeForwardDistance = 0.5f;
+
     private bool moveRight = true;
 
     // Start is called before the first frame update
@@ -32,8 +34,17 @@ public class Enemies : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Tells lobster to move left if too far right
-        if (lobTrans.position.x > 8.5f && moveRight)
+        // Tells lobster to move left if it sees a wall and is moving right
+        if (Physics.Raycast(lobTrans.up * lobTrans.localScale.y / 2, lobTrans.up, seeForwardDistance) && moveRight)
+        {
+            moveRight = false;
+        }// Opposite of above
+        else if (Physics.Raycast(lobTrans.up* lobTrans.localScale.y / 2, lobTrans.up, seeForwardDistance) && !moveRight)
+        {
+            moveRight = true;
+        }
+
+    if (lobTrans.position.x > 8.5f && moveRight)
         {
             moveRight = false;
         } // Opposite of above
