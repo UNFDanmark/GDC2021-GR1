@@ -8,8 +8,11 @@ public class LobsterMobster : MonoBehaviour
 
     private Transform myTrans;
 
-    public float minWait = 14f;
-    public float maxWait = 20f;
+    public float minWait = 3f;
+    public float maxWait = 5f;
+
+    private float speedOfLobsters = 0.5f;
+
     private float waitLength;
 
     private float currentWait;
@@ -35,7 +38,7 @@ public class LobsterMobster : MonoBehaviour
             SpawnLobsters();
 
             // Chooses a random waiting time
-            waitLength = Random.Range(minWait, maxWait);
+            waitLength = Random.Range(minWait, maxWait) / speedOfLobsters;
             // Sets the wait to the chosen waiting time
             currentWait = Time.time + waitLength;
         }
@@ -49,8 +52,9 @@ public class LobsterMobster : MonoBehaviour
         */
 
         // Spawns the next wall
-        Instantiate(lobster, new Vector3(0, -10, 0), myTrans.rotation);
+        GameObject myLobster = Instantiate(lobster, new Vector3(0, -10, 0), myTrans.rotation);
 
-        // i må godt slette wall spawner :D
+        // Finder ud af hvor hurtig den sidste lobster var
+        speedOfLobsters = myLobster.GetComponent<LobsterMoveUp>().moveUpSpeed;
     }
 }

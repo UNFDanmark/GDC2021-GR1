@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private bool pauseIsOpen = false;
+    public bool pauseIsOpen = false;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    IEnumerator LoadPauseMenu()
+    public IEnumerator LoadPauseMenu()
     {
         // Hvis pause menu ikke er åben, begynder øverste del at køre
         if (!pauseIsOpen)
