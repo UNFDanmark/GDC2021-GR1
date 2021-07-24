@@ -28,6 +28,20 @@ public class Submarine : MonoBehaviour
 
     void Move()
     {
+        // Oversætter Button Inputs (Fra Input Manager) til bevægelse
+        subRB.velocity += new Vector3(Input.GetAxis("Horizontal") * moveSpeed, Input.GetAxis("Vertical") * moveSpeed, 0);
+
+        // Kig den vej man bevæger sig (højre og venstre)
+        if (Input.GetAxis("Horizontal") < 0)
+        {
+            subTransform.rotation = Quaternion.Euler(0, 180, 90);
+        }
+        else if (Input.GetAxis("Horizontal") > 0)
+        {
+            subTransform.rotation = Quaternion.Euler(0, 0, 90);
+        }
+
+        /*
         // Gives the player movement in a direction according to input
         if (Input.GetKey(KeyCode.UpArrow))
         {
@@ -47,5 +61,6 @@ public class Submarine : MonoBehaviour
             subTransform.rotation = Quaternion.Euler(0, 180, 90);
             subRB.velocity += new Vector3(-moveSpeed, 0, 0);
         }
+        */
     }
 }

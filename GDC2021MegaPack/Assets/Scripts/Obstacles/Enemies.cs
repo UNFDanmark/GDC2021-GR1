@@ -33,11 +33,11 @@ public class Enemies : MonoBehaviour
     void Update()
     {
         // Tells lobster to move left if too far right
-        if (lobTrans.position.x > 10.5f && moveRight)
+        if (lobTrans.position.x > 8.5f && moveRight)
         {
             moveRight = false;
         } // Opposite of above
-        else if (lobTrans.position.x < -10.5f && !moveRight)
+        else if (lobTrans.position.x < -8.5f && !moveRight)
         {
             moveRight = true;
         }

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/SubmarineScene.unity
+    guid: 9e0c09b528676f74db934ef464ae1e3c
+  - enabled: 1
+    path: Assets/Scenes/PauseMenu.unity
+    guid: baffbf161732b5545a38d36cf67bfc1c
   m_configObjects: {}

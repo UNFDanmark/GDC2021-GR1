@@ -38,7 +38,5 @@ public class WallsMoveUp : MonoBehaviour
 
         // Spawns the next wall
         Instantiate(walls[wallNum], new Vector3(0, myTransform.position.y - myTransform.localScale.y / 2, 0), myTransform.rotation);
-
-        // i må godt slette wall spawner :D
     }
 }
