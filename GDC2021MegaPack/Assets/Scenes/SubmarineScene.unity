@@ -1141,6 +1141,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184403569}
   m_CullTransparentMesh: 1
+--- !u!1 &1292061876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1292061877}
+  - component: {fileID: 1292061878}
+  m_Layer: 0
+  m_Name: MineMobster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1292061877
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292061876}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -10, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1292061878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292061876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04c2dd8601cae7d44975dac52a9bacdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mine: {fileID: 4498092911320957688, guid: 5ba3e67d68922824785a1bea69000b3f, type: 3}
+  minWait: 7
+  maxWait: 15
 --- !u!1 &1336640355
 GameObject:
   m_ObjectHideFlags: 0
@@ -1365,7 +1411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1620673514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1375,7 +1421,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1620673513}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04c2dd8601cae7d44975dac52a9bacdb, type: 3}
+  m_Script: {fileID: 11500000, guid: e618662ed8223644b80cd1842aa653bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lobster: {fileID: 5967318838417695863, guid: 06038f1ec642389458eee7b0947c2ee7, type: 3}
@@ -1786,6 +1832,7 @@ MonoBehaviour:
   maxHealth: 3
   currentHealth: 0
   healthText: {fileID: 1184403571}
+  invulnerableLength: 3
 --- !u!1001 &1035932226262680326
 PrefabInstance:
   m_ObjectHideFlags: 0
