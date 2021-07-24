@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 1499163207722572862}
   - component: {fileID: 5358129072686095520}
   - component: {fileID: 4306239582589078827}
-  - component: {fileID: 8710841841397092846}
+  - component: {fileID: -6406189670425932226}
   - component: {fileID: 5424274764717826475}
   - component: {fileID: 4031525266474201714}
   - component: {fileID: 5739607486476799167}
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmgAmount: 1
---- !u!114 &8710841841397092846
+--- !u!114 &-6406189670425932226
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,10 +156,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5967318838417695863}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a91c9bb3041b6bd44a5c01a32c7e38f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 712c68ff11686fa4f88a788a2c1ff10c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveUpSpeed: 0.25
+  minSpeed: 0.25
+  maxSpeed: 0.6
+  moveUpSpeed: 0.5
 --- !u!33 &5424274764717826475
 MeshFilter:
   m_ObjectHideFlags: 0
