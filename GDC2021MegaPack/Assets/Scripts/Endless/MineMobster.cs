@@ -8,7 +8,7 @@ public class MineMobster : MonoBehaviour
 
     private Transform myTrans;
 
-    public LayerMask everythingButWalls;
+    public LayerMask Walls;
 
     //Ventetid for hvornår minerne spawner
     public float minWait = 7f;
@@ -54,13 +54,30 @@ public class MineMobster : MonoBehaviour
     void SpawnMines()
     {
         // Checker hvorhenne væggene er, så vi kan spawne minerne mellem dem
-        
-        RaycastHit hit;
-        Physics.Raycast(transform.position, Vector3.left, out hit, 30f, everythingButWalls);
-        Vector3 leftWallPosition = hit.point;
+        float xCoordinate = 0f;
 
-        // Spawner minen et tilfældigt sted mellem væggene
-        float xCoordinate = Random.Range(leftXCoordinate, rightXCoordinate);
+        // Kaster en ray til ventre, som den så får koordinaterne af
+        RaycastHit hitLeft;
+        Physics.Raycast(transform.position, Vector3.left, out hitLeft, 30f, Walls);
+        Vector3 leftWallPosition = hitLeft.point;
+
+        // Kaster en ray til højre, som den så får koordinaterne af
+        RaycastHit hitRight;
+        Physics.Raycast(transform.position, Vector3.left, out hitRight, 30f, Walls);
+        Vector3 rightWallPosition = hitRight.point;
+
+        // Finder ud af om den så en væg eller ej
+        if (leftWallPosition != Vector3.zero && rightWallPosition != Vector3.zero)
+        {
+            // Spawner minen et tilfældigt sted mellem de vægge den så
+            xCoordinate = Random.Range(leftWallPosition.x + 1, rightWallPosition.x - 1);
+        }
+        else
+        {
+            // Spawner minen et tilfældigt sted mellem manuelt indskreved koordinater
+            xCoordinate = Random.Range(leftXCoordinate, rightXCoordinate);
+        }
+
 
         // Spawns the next mine
         GameObject myMine = Instantiate(mine, new Vector3(xCoordinate, -10, 0), Quaternion.Euler(0, Random.Range(0, 360), 0));
