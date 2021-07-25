@@ -10,6 +10,8 @@ public class Submarine : MonoBehaviour
 
     public float moveSpeed = 5f;
 
+    public bool isMoving = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +22,13 @@ public class Submarine : MonoBehaviour
     void FixedUpdate()
     {
         // Only called if a key is held down
-        if (Input.anyKey)
+        if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
         {
             Move();
+        }
+        else
+        {
+            isMoving = false;
         }
     }
 
@@ -34,11 +40,13 @@ public class Submarine : MonoBehaviour
         // Kig den vej man bevæger sig (højre og venstre)
         if (Input.GetAxis("Horizontal") < 0)
         {
-            subTransform.rotation = Quaternion.Euler(0, 180, 90);
+            // subTransform.rotation = Quaternion.Euler(0, 180, 90);
+            isMoving = true;
         }
         else if (Input.GetAxis("Horizontal") > 0)
         {
-            subTransform.rotation = Quaternion.Euler(0, 0, 90);
+            // subTransform.rotation = Quaternion.Euler(0, 0, 90);
+            isMoving = true;
         }
 
         /*
