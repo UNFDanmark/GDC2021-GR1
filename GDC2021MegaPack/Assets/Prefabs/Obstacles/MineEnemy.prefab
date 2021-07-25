@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9071135092454671314}
   m_Layer: 7
   m_Name: MineEnemy
-  m_TagString: Untagged
+  m_TagString: Mine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,6 +66,8 @@ MonoBehaviour:
   explosionPower: 1000
   explosionRadius: 1.5
   destroyOnHit: 1
+  thingsToAttack:
+  - Player
 --- !u!114 &6975918098809587518
 MonoBehaviour:
   m_ObjectHideFlags: 0

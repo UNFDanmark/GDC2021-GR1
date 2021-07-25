@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - GameManager
+  - Lobster
+  - Mine
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -16,7 +19,7 @@ TagManager:
   - Enemy
   - Invulnerable
   - LightVisual
-  - 
+  - InvisWalls
   - 
   - 
   - 
