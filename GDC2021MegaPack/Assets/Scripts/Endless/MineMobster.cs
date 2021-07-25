@@ -8,9 +8,13 @@ public class MineMobster : MonoBehaviour
 
     private Transform myTrans;
 
+    public LayerMask everythingButWalls;
+
+    //Ventetid for hvornår minerne spawner
     public float minWait = 7f;
     public float maxWait = 15f;
 
+    //Koordinater, til spawning af miner
     private float leftXCoordinate = -8.5f;
     private float rightXCoordinate = 8.5f;
 
@@ -49,10 +53,13 @@ public class MineMobster : MonoBehaviour
 
     void SpawnMines()
     {
-        /*
-        // Gets a random number between 0 and the number of walls
-        int wallNum = Random.Range(0, walls.Length);
-        */
+        // Checker hvorhenne væggene er, så vi kan spawne minerne mellem dem
+        
+        RaycastHit hit;
+        Physics.Raycast(transform.position, Vector3.left, out hit, 30f, everythingButWalls);
+        Vector3 leftWallPosition = hit.point;
+
+        // Spawner minen et tilfældigt sted mellem væggene
         float xCoordinate = Random.Range(leftXCoordinate, rightXCoordinate);
 
         // Spawns the next mine
