@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1703207538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1703207539}
+  m_Layer: 7
+  m_Name: LaserSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1703207539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703207538}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1499163207722572862}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2816866995936304202
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,7 +129,7 @@ GameObject:
   - component: {fileID: 4224408018271907086}
   m_Layer: 7
   m_Name: Lobster
-  m_TagString: Untagged
+  m_TagString: Lobster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,6 +147,7 @@ Transform:
   m_Children:
   - {fileID: 3595053925738480852}
   - {fileID: 8741528211487539948}
+  - {fileID: 1703207539}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
@@ -132,8 +163,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a9686f01aa34504f8e07e73a85d68d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  laserSpawn: {fileID: 1703207539}
   minSpeed: 1
   maxSpeed: 2
+  seeForwardDistance: 0.5
+  onlyWalls:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &4306239582589078827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,6 +183,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmgAmount: 1
+  explosionPower: 30
+  explosionRadius: 1.5
+  destroyOnHit: 0
+  thingsToAttack:
+  - Player
 --- !u!114 &-6406189670425932226
 MonoBehaviour:
   m_ObjectHideFlags: 0

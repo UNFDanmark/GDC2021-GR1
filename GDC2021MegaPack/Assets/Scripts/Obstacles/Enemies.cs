@@ -7,10 +7,16 @@ public class Enemies : MonoBehaviour
     private Rigidbody lobsterRB;
     private Transform lobTrans;
 
+    public Transform laserSpawn;
+
     public float minSpeed = 1f;
     public float maxSpeed = 1.5f;
 
     private float moveSpeed = 1.25f;
+
+    public float seeForwardDistance = 0.5f;
+
+    public LayerMask onlyWalls;
 
     private bool moveRight = true;
 
@@ -32,7 +38,7 @@ public class Enemies : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Tells lobster to move left if too far right
+        /*
         if (lobTrans.position.x > 8.5f && moveRight)
         {
             moveRight = false;
@@ -41,11 +47,34 @@ public class Enemies : MonoBehaviour
         {
             moveRight = true;
         }
+        */
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        // Laver en retningsvektor mod højre
+        Vector3 laserDirection = Vector3.right;
+
+        // Hvis lobster bevæger sig mod venstre, drejes retningsvektoren også den vej
+        if (!moveRight)
+        {
+            laserDirection = laserDirection * -1;
+        }
+
+        // Tegner lobster's syn i editor
+        // Debug.DrawRay(laserSpawn.position, laserDirection, Color.green, seeForwardDistance);
+
+        // Skyder en laser fra dens angivne spawnPoint (Tom transform sat foran lobsteren), i retningen lobsteren bevæger sig, så langt frem den kan se og kun på vægge
+        if (Physics.Raycast(laserSpawn.position, laserDirection, seeForwardDistance, onlyWalls) && moveRight)
+        {
+            moveRight = false;
+        }// Opposite of above
+        else if (Physics.Raycast(laserSpawn.position, laserDirection, seeForwardDistance, onlyWalls) && !moveRight)
+        {
+            moveRight = true;
+        }
+
         if (moveRight)
         {
             // Sets rotation to make lobster look right
