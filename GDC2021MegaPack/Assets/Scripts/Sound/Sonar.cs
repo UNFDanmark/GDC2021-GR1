@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Sonar : MonoBehaviour
 {
-    public AudioSource sonar_audio;
-    private bool Sonar_Has_Gone_Off = false;
+    public AudioSource sonar_source;
+    public AudioClip sonar;
+    public int radius;
+    int layerMask = 1 << 7;
 
     // Start is called before the first frame update
     void Start()
@@ -19,15 +21,16 @@ public class Sonar : MonoBehaviour
         
     }
 
-
-    private void OnTriggerEnter(Collider other)
+    private void FixedUpdate()
     {
-        //If the sonar has'nt gone off yet, go off
-        //This might be changed later
-        if (Sonar_Has_Gone_Off == false && other.tag == "SubCollidor") 
+        RaycastHit hit;
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(transform.position, transform.TransformDirection(new Vector3(transform.position.x + radius * Mathf.Cos(Time.time), transform.position.y + radius * Mathf.Sin(Time.time), 0)), out hit, Mathf.Infinity, layerMask))
         {
-            sonar_audio.Play();
-            Sonar_Has_Gone_Off = true;
+            AudioSource.PlayClipAtPoint(sonar, new Vector3(hit.transform.position.x, hit.transform.position.y, 0)) ;
         }
     }
+
+   
+
 }
