@@ -20,12 +20,18 @@ public class Enemies : MonoBehaviour
 
     private bool moveRight = true;
 
+    public float sizeVariance = 0.2f;
+
     // Start is called before the first frame update
     void Start()
     {
         // Gets the rigidbody and transform components
         lobsterRB = gameObject.GetComponent<Rigidbody>();
         lobTrans = gameObject.GetComponent<Transform>();
+
+        // Giver lobsters tilfældig størrelse når de spawner
+        float newSize = Random.Range(0.75f - sizeVariance, 0.75f + sizeVariance);
+        transform.localScale = new Vector3(newSize, newSize, newSize);
 
         // Sets a random movement speed between min and max
         moveSpeed = Random.Range(minSpeed, maxSpeed);
