@@ -14,6 +14,8 @@ public class PlayerHealth : MonoBehaviour
 
     public GameObject colliderHolder;
 
+    public GameObject modelHolder;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +64,9 @@ public class PlayerHealth : MonoBehaviour
 
     public IEnumerator Death()
     {
+        // Sletter modellen når ubåden dør
+        Destroy(modelHolder);
+
         // Stopper tiden
         Time.timeScale = 0;
 
@@ -77,7 +82,5 @@ public class PlayerHealth : MonoBehaviour
         {
             yield return null;
         }
-
-        Destroy(gameObject);
     }
 }
