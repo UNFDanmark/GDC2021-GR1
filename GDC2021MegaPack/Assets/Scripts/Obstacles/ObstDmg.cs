@@ -15,13 +15,16 @@ public class ObstDmg : MonoBehaviour
 
     public string[] thingsToAttack;
 
-    public AudioClip mineSFX;
+    public AudioSource audio;
+    public Renderer ChildRend1, ChildRend2, ChildRend3, ChildRend4;
+
 
     // Start is called before the first frame update
     void Start()
     {
         // Definerer Rigidbody
         enemyRB = gameObject.GetComponent<Rigidbody>();
+ 
     }
 
     void OnCollisionEnter(Collision collision)
@@ -39,8 +42,17 @@ public class ObstDmg : MonoBehaviour
                 collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(explosionPower, gameObject.GetComponent<Transform>().position, explosionRadius);
                 if (destroyOnHit)
                 {
-                    AudioSource.PlayClipAtPoint(mineSFX, transform.position);
-                    Destroy(gameObject);
+                    audio.Play();
+                    
+                    //Remove the mine visually
+                    ChildRend1.enabled = false;
+                    ChildRend2.enabled = false;
+                    ChildRend3.enabled = false;
+                    ChildRend4.enabled = false;
+                    gameObject.GetComponent<Collider>().enabled = false;
+
+                    //Destroy when audioclip is done
+                    Destroy(gameObject, audio.clip.length);
                 }
             }
         }
