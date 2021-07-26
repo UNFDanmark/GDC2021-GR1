@@ -5344,7 +5344,7 @@ Transform:
   - {fileID: 1107363567}
   - {fileID: 2010293689}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &175280986
 GameObject:
@@ -43952,6 +43952,8 @@ MonoBehaviour:
   pointsPerSecond: 5
   beginDarkening: 100
   completeDarkness: 500
+  extraDifficulty: 500
+  lobsterDifficulty: 2000
   scoreTextPro: {fileID: 38073272}
 --- !u!4 &1961066912
 Transform:
@@ -44230,6 +44232,7 @@ MonoBehaviour:
   - {fileID: 771347432}
   invulnerableLength: 3
   colliderHolder: {fileID: 1187417950}
+  modelHolder: {fileID: 1246223644}
 --- !u!1 &2116085992
 GameObject:
   m_ObjectHideFlags: 0
@@ -44354,7 +44357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1228292578146617765, guid: 3fc0b47c31313d941a43f9de8392d070, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1228292578146617765, guid: 3fc0b47c31313d941a43f9de8392d070, type: 3}
       propertyPath: m_LocalPosition.x
