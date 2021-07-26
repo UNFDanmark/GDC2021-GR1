@@ -44232,7 +44232,9 @@ MonoBehaviour:
   - {fileID: 771347432}
   invulnerableLength: 3
   colliderHolder: {fileID: 1187417950}
-  modelHolder: {fileID: 1246223644}
+  deathObjects:
+  - {fileID: 1246223644}
+  - {fileID: 1983958725}
 --- !u!1 &2116085992
 GameObject:
   m_ObjectHideFlags: 0
