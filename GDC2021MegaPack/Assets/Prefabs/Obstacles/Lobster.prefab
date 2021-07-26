@@ -183,11 +183,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmgAmount: 1
-  explosionPower: 30
+  explosionPower: 100
   explosionRadius: 1.5
-  destroyOnHit: 0
+  destroyOnHit: 1
   thingsToAttack:
   - Player
+  mineSFX: {fileID: 8300000, guid: 0f217f9557792e94e8120f37180b1ed8, type: 3}
 --- !u!114 &-6406189670425932226
 MonoBehaviour:
   m_ObjectHideFlags: 0

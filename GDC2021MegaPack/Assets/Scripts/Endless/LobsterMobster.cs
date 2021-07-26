@@ -8,10 +8,14 @@ public class LobsterMobster : MonoBehaviour
 
     private Transform myTrans;
 
-    public float minWait = 3f;
-    public float maxWait = 5f;
+    public float startMin = 10f;
+    public float startMax = 16f;
 
-    private float speedOfLobsters = 0.5f;
+    public float endMin = 5f;
+    public float endMax = 9f;
+
+    private float minWait;
+    private float maxWait;
 
     private float waitLength;
 
@@ -20,6 +24,9 @@ public class LobsterMobster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        minWait = startMin;
+        maxWait = startMax;
+
         myTrans = gameObject.GetComponent<Transform>();
         SpawnLobsters();
 
@@ -38,7 +45,7 @@ public class LobsterMobster : MonoBehaviour
             SpawnLobsters();
 
             // Chooses a random waiting time
-            waitLength = Random.Range(minWait, maxWait) / speedOfLobsters;
+            waitLength = Random.Range(minWait, maxWait);
             // Sets the wait to the chosen waiting time
             currentWait = Time.time + waitLength;
         }
@@ -51,10 +58,19 @@ public class LobsterMobster : MonoBehaviour
         int wallNum = Random.Range(0, walls.Length);
         */
 
+        // Bliver kaldt når mørket er begyndt
+        if (ScoreHandler.hasBegunDarkening)
+        {
+            // Får spawntime til at falde lineært indtil vi rammer komplet mørke
+            if (minWait != endMin && maxWait != endMax)
+            {
+                minWait = Mathf.Lerp(startMin, endMin, (ScoreHandler.playerScore - ScoreHandler.startDarkValue) / (ScoreHandler.endDarkValue - ScoreHandler.startDarkValue));
+
+                maxWait = Mathf.Lerp(startMax, endMax, (ScoreHandler.playerScore - ScoreHandler.startDarkValue) / (ScoreHandler.endDarkValue - ScoreHandler.startDarkValue));
+            }
+        }
+
         // Spawns the next wall
         GameObject myLobster = Instantiate(lobster, new Vector3(0, -10, 0), myTrans.rotation);
-
-        // Finder ud af hvor hurtig den sidste lobster var
-        speedOfLobsters = myLobster.GetComponent<LobsterMoveUp>().moveUpSpeed;
     }
 }
