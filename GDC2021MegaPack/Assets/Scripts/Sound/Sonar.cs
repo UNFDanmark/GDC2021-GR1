@@ -19,8 +19,11 @@ public class Sonar : MonoBehaviour
         
     }
 
+
     private void OnTriggerEnter(Collider other)
     {
+        //If the sonar has'nt gone off yet, go off
+        //This might be changed later
         if (Sonar_Has_Gone_Off == false && other.tag == "SubCollidor") 
         {
             audio.Play();

@@ -43,12 +43,15 @@ public class ObstDmg : MonoBehaviour
                 if (destroyOnHit)
                 {
                     audio.Play();
+                    
+                    //Remove the mine visually
                     ChildRend1.enabled = false;
                     ChildRend2.enabled = false;
                     ChildRend3.enabled = false;
                     ChildRend4.enabled = false;
                     gameObject.GetComponent<Collider>().enabled = false;
 
+                    //Destroy when audioclip is done
                     Destroy(gameObject, audio.clip.length);
                 }
             }
