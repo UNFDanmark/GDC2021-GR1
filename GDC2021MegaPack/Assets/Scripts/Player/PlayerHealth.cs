@@ -8,16 +8,22 @@ public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 3;
     public int currentHealth;
-    public Text healthText;
+    public GameObject[] healthPropellers;
 
     public float invulnerableLength = 3f;
+
+    public GameObject colliderHolder;
 
     // Start is called before the first frame update
     void Start()
     {
         Time.timeScale = 1;
         currentHealth = maxHealth;
-        healthText.text = "Health: " + currentHealth.ToString();
+
+        if (colliderHolder == null)
+        {
+            colliderHolder = gameObject;
+        }
     }
 
     public void TakeDamage(int dmgAmount)
@@ -40,14 +46,18 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = maxHealth;
         }
 
-        healthText.text = "Health: " + currentHealth.ToString();
+        for (int i = 0; i < dmgAmount; i++)
+        {
+            healthPropellers[currentHealth + i].SetActive(false);
+        }
+        // healthText.text = "Health: " + currentHealth.ToString();
     }
 
     IEnumerator BecomeInvulnerable()
     {
-        gameObject.layer = 8;
+        colliderHolder.layer = 8;
         yield return new WaitForSeconds(invulnerableLength);
-        gameObject.layer = 3;
+        colliderHolder.layer = 3;
     }
 
     public IEnumerator Death()
