@@ -18,17 +18,17 @@ public class MineMobster : MonoBehaviour
     private float leftXCoordinate = -8.5f;
     private float rightXCoordinate = 8.5f;
 
-    private float speedOfMines = 0.5f;
-
     private float waitLength;
 
     private float currentWait;
+
+    // Bruges til at få minerne til at spawne forskudt fra at vi begynder at gøre skærmen mørkere
+    public float spawningDesync = 100f;
 
     // Start is called before the first frame update
     void Start()
     {
         myTrans = gameObject.GetComponent<Transform>();
-        SpawnMines();
 
         // Chooses a random waiting time
         waitLength = Random.Range(minWait, maxWait);
@@ -40,12 +40,12 @@ public class MineMobster : MonoBehaviour
     void Update()
     {
         // if wait is over, spawn a mine
-        if (Time.time >= currentWait)
+        if (Time.time >= currentWait && ScoreHandler.startDarkValue + spawningDesync <= ScoreHandler.playerScore)
         {
             SpawnMines();
 
             // Chooses a random waiting time
-            waitLength = Random.Range(minWait, maxWait) / speedOfMines;
+            waitLength = Random.Range(minWait, maxWait);
             // Sets the wait to the chosen waiting time
             currentWait = Time.time + waitLength;
         }
@@ -53,6 +53,11 @@ public class MineMobster : MonoBehaviour
 
     void SpawnMines()
     {
+        if (ScoreHandler.isCompletelyDark)
+        {
+            minWait = 4f;
+            maxWait = 8f;
+        }
         // Checker hvorhenne væggene er, så vi kan spawne minerne mellem dem
         float xCoordinate = 0f;
 
@@ -81,9 +86,5 @@ public class MineMobster : MonoBehaviour
 
         // Spawns the next mine
         GameObject myMine = Instantiate(mine, new Vector3(xCoordinate, -10, 0), Quaternion.Euler(0, Random.Range(0, 360), 0));
-
-        // Finder ud af hvor hurtig den sidste mine var
-        speedOfMines = myMine.GetComponent<LobsterMoveUp>().moveUpSpeed;
-
     }
 }

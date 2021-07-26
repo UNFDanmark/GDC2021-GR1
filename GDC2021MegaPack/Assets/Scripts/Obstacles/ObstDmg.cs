@@ -15,6 +15,8 @@ public class ObstDmg : MonoBehaviour
 
     public string[] thingsToAttack;
 
+    public AudioClip mineSFX;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,7 @@ public class ObstDmg : MonoBehaviour
                 collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(explosionPower, gameObject.GetComponent<Transform>().position, explosionRadius);
                 if (destroyOnHit)
                 {
+                    AudioSource.PlayClipAtPoint(mineSFX, transform.position);
                     Destroy(gameObject);
                 }
             }
