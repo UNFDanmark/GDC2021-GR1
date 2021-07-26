@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 3;
     public int currentHealth;
-    public Text healthText;
+    public GameObject[] healthPropellers;
 
     public float invulnerableLength = 3f;
 
@@ -17,7 +17,6 @@ public class PlayerHealth : MonoBehaviour
     {
         Time.timeScale = 1;
         currentHealth = maxHealth;
-        healthText.text = "Health: " + currentHealth.ToString();
     }
 
     public void TakeDamage(int dmgAmount)
@@ -40,7 +39,11 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = maxHealth;
         }
 
-        healthText.text = "Health: " + currentHealth.ToString();
+        for (int i = 0; i < dmgAmount; i++)
+        {
+            healthPropellers[currentHealth + i].SetActive(false);
+        }
+        // healthText.text = "Health: " + currentHealth.ToString();
     }
 
     IEnumerator BecomeInvulnerable()
