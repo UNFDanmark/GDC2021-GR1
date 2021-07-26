@@ -68,6 +68,7 @@ MonoBehaviour:
   destroyOnHit: 1
   thingsToAttack:
   - Player
+  mineSFX: {fileID: 8300000, guid: 6e0835a8883893a4cbabaa590e3a5352, type: 3}
 --- !u!114 &6975918098809587518
 MonoBehaviour:
   m_ObjectHideFlags: 0

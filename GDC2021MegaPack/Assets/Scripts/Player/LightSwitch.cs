@@ -8,6 +8,8 @@ public class LightSwitch : MonoBehaviour
 
     public GameObject lights;
 
+    public AudioClip switchSFX;
+
     // Update is called once per frame
     void Update()
     {
@@ -15,6 +17,7 @@ public class LightSwitch : MonoBehaviour
         if (ScoreHandler.endDarkValue - timeEarlierToTurnOn <= ScoreHandler.playerScore)
         {
             lights.SetActive(true);
+            AudioSource.PlayClipAtPoint(switchSFX, transform.position);
             Destroy(gameObject);
         }
     }

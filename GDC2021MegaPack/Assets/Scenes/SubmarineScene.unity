@@ -38061,6 +38061,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeEarlierToTurnOn: 100
   lights: {fileID: 1983958725}
+  switchSFX: {fileID: 8300000, guid: 0f217f9557792e94e8120f37180b1ed8, type: 3}
 --- !u!1001 &1035932226262680326
 PrefabInstance:
   m_ObjectHideFlags: 0
