@@ -12,11 +12,18 @@ public class PlayerHealth : MonoBehaviour
 
     public float invulnerableLength = 3f;
 
+    public GameObject colliderHolder;
+
     // Start is called before the first frame update
     void Start()
     {
         Time.timeScale = 1;
         currentHealth = maxHealth;
+
+        if (colliderHolder == null)
+        {
+            colliderHolder = gameObject;
+        }
     }
 
     public void TakeDamage(int dmgAmount)
@@ -48,9 +55,9 @@ public class PlayerHealth : MonoBehaviour
 
     IEnumerator BecomeInvulnerable()
     {
-        gameObject.layer = 8;
+        colliderHolder.layer = 8;
         yield return new WaitForSeconds(invulnerableLength);
-        gameObject.layer = 3;
+        colliderHolder.layer = 3;
     }
 
     public IEnumerator Death()
