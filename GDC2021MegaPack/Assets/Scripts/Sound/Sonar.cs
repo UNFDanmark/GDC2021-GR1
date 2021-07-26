@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Sonar : MonoBehaviour
 {
-    public AudioSource audio;
+    public AudioSource sonar_audio;
     private bool Sonar_Has_Gone_Off = false;
 
     // Start is called before the first frame update
@@ -26,7 +26,7 @@ public class Sonar : MonoBehaviour
         //This might be changed later
         if (Sonar_Has_Gone_Off == false && other.tag == "SubCollidor") 
         {
-            audio.Play();
+            sonar_audio.Play();
             Sonar_Has_Gone_Off = true;
         }
     }

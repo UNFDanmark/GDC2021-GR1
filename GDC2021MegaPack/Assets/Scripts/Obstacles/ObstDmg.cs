@@ -15,8 +15,7 @@ public class ObstDmg : MonoBehaviour
 
     public string[] thingsToAttack;
 
-    public AudioSource audio;
-    public Renderer ChildRend1, ChildRend2, ChildRend3, ChildRend4;
+    public AudioSource dam_audio;
 
 
     // Start is called before the first frame update
@@ -29,30 +28,26 @@ public class ObstDmg : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        // Går gennem hvert tag i "thingsToAttack"
+        // Gï¿½r gennem hvert tag i "thingsToAttack"
         for (int i = 0; i < thingsToAttack.Length; i++)
         {
             // Tjekker om det den collider med's tag er en af tingene der skal angribes
             if (collision.gameObject.tag == thingsToAttack[i])
             {
-                // Fortæller playerHealth at den skal tage skade
+                // Fortï¿½ller playerHealth at den skal tage skade
                 collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(dmgAmount);
 
-                // Fortæller rigidbody at vi eksplodere (BOOOOM!)
+                // Fortï¿½ller rigidbody at vi eksplodere (BOOOOM!)
                 collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(explosionPower, gameObject.GetComponent<Transform>().position, explosionRadius);
                 if (destroyOnHit)
                 {
-                    audio.Play();
-                    
-                    //Remove the mine visually
-                    ChildRend1.enabled = false;
-                    ChildRend2.enabled = false;
-                    ChildRend3.enabled = false;
-                    ChildRend4.enabled = false;
-                    gameObject.GetComponent<Collider>().enabled = false;
+                    dam_audio.Play();
+
+                    foreach (Transform child in transform)
+                        child.gameObject.SetActive(false);
 
                     //Destroy when audioclip is done
-                    Destroy(gameObject, audio.clip.length);
+                    Destroy(gameObject, dam_audio.clip.length);
                 }
             }
         }
