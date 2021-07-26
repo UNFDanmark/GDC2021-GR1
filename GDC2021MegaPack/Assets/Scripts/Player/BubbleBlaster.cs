@@ -13,13 +13,13 @@ public class BubbleBlaster : MonoBehaviour
     {
         mainSub = transform.parent.gameObject.GetComponent<Submarine>();
         bubbleSpawner = GetComponent<ParticleSystem>();
-        bubbleSpawner.Stop();
+        bubbleSpawner.Pause();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (mainSub.isMoving && bubbleSpawner.isStopped)
+        if (mainSub.isMoving)
         {
             bubbleSpawner.Play();
         }
