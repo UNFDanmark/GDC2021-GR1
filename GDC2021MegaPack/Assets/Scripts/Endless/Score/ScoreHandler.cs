@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ScoreHandler : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class ScoreHandler : MonoBehaviour
     public static float startDarkValue;
     public static float endDarkValue;
 
-    public Text scoreText;
+    public TMP_Text scoreTextPro;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,7 @@ public class ScoreHandler : MonoBehaviour
         // Forøger scoren med PointsPerSecond hvert sekund
         playerScore += pointsPerSecond * Time.deltaTime;
         // Skriver en int udgave af playerScore i UI
-        scoreText.text = ((int)playerScore).ToString() + " m";
+        scoreTextPro.text = ((int)playerScore).ToString() + " m";
 
         hasBegunDarkening = playerScore >= beginDarkening;
         isCompletelyDark = playerScore >= completeDarkness;
