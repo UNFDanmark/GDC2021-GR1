@@ -58,8 +58,13 @@ public class LobsterMobster : MonoBehaviour
         int wallNum = Random.Range(0, walls.Length);
         */
 
-        // Bliver kaldt når mørket er begyndt
-        if (ScoreHandler.hasBegunDarkening)
+
+        if (ScoreHandler.summonTheMobster)
+        {
+            minWait = 3f;
+            maxWait = 6f;
+        }        
+        else if (ScoreHandler.hasBegunDarkening) // Bliver kaldt når mørket er begyndt
         {
             // Får spawntime til at falde lineært indtil vi rammer komplet mørke
             if (minWait != endMin && maxWait != endMax)

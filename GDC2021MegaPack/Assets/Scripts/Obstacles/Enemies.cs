@@ -38,6 +38,11 @@ public class Enemies : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (ScoreHandler.gameGetHarder)
+        {
+            minSpeed += 1f;
+            maxSpeed += 1f;
+        }
         /*
         if (lobTrans.position.x > 8.5f && moveRight)
         {

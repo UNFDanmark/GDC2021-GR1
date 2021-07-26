@@ -43815,6 +43815,8 @@ MonoBehaviour:
   pointsPerSecond: 5
   beginDarkening: 100
   completeDarkness: 500
+  extraDifficulty: 500
+  lobsterDifficulty: 2000
   scoreTextPro: {fileID: 38073272}
 --- !u!4 &1961066912
 Transform:
