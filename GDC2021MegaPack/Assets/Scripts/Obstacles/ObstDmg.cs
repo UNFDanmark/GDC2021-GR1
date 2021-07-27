@@ -41,10 +41,12 @@ public class ObstDmg : MonoBehaviour
                 collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(explosionPower, gameObject.GetComponent<Transform>().position, explosionRadius);
                 if (destroyOnHit)
                 {
-                    dam_audio.Play();
+                   
 
                     foreach (Transform child in transform)
                         child.gameObject.SetActive(false);
+
+                    dam_audio.Play();
 
                     //Destroy when audioclip is done
                     Destroy(gameObject, dam_audio.clip.length);

@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Sonar : MonoBehaviour
 {
-    public AudioSource sonar_source;
+    public float sonar_speed;
     public AudioClip sonar;
-    public int radius;
+    public float radius;
+
+    // the layer we want to hit, in this case 7, which is enemy
     int layerMask = 1 << 7;
 
     // Start is called before the first frame update
@@ -23,11 +25,20 @@ public class Sonar : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Raycast object
         RaycastHit hit;
-        // Does the ray intersect any objects excluding the player layer
-        if (Physics.Raycast(transform.position, transform.TransformDirection(new Vector3(transform.position.x + radius * Mathf.Cos(Time.time), transform.position.y + radius * Mathf.Sin(Time.time), 0)), out hit, Mathf.Infinity, layerMask))
+
+        // The vector for the raycaster
+        Vector3 rayVector;
+
+        // Makes the vector spin around
+        rayVector = new Vector3(Mathf.Cos(Time.time*sonar_speed), Mathf.Sin(Time.time*sonar_speed), 0);
+
+        if (Physics.Raycast(transform.position, transform.TransformDirection(rayVector), out hit, Mathf.Infinity, layerMask))
         {
-            AudioSource.PlayClipAtPoint(sonar, new Vector3(hit.transform.position.x, hit.transform.position.y, 0)) ;
+            // Is only counted if within radius
+            if(hit.distance < radius)
+                AudioSource.PlayClipAtPoint(sonar, new Vector3(hit.transform.position.x, hit.transform.position.y, 0), 0.7f) ;
         }
     }
 
