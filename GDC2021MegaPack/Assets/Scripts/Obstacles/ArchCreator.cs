@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class ArchCreator : MonoBehaviour
 {
+    public GameObject archWay;
+
+    public float archChance = 0.05f;
+
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (Random.value < archChance && ScoreHandler.isCompletelyDark)
+        {
+            archWay.SetActive(true);
+        }
     }
 }

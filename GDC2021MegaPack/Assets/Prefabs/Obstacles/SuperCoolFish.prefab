@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 1786781609998576183}
   - component: {fileID: -804814158697356204}
   - component: {fileID: 790436828}
+  - component: {fileID: 8187980355835609922}
   m_Layer: 7
   m_Name: SuperCoolFish
   m_TagString: Lobster
@@ -264,6 +265,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &8187980355835609922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4251401625355776778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772224332fba82543ac9101af2ed80b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  archWay: {fileID: 1219999604995804911}
+  archChance: 0.05
 --- !u!95 &1420663845428257564
 Animator:
   serializedVersion: 3
@@ -388,4 +403,87 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6424696975218040852, guid: 49bacb0d5caed3d4a8fb294fc5006cc7, type: 3}
   m_PrefabInstance: {fileID: 5944326223653104581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5843929991567420762 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 245360872418002591, guid: 49bacb0d5caed3d4a8fb294fc5006cc7, type: 3}
+  m_PrefabInstance: {fileID: 5944326223653104581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8658588361344700699
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5843929991567420762}
+    m_Modifications:
+    - target: {fileID: 928360400514639323, guid: 5f5e393346505a94390d439428660b36, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c9684c1d27e64474fad23cd17dedcd5d, type: 2}
+    - target: {fileID: 3513022769112576592, guid: 5f5e393346505a94390d439428660b36, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513022769112576592, guid: 5f5e393346505a94390d439428660b36, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513022769112576592, guid: 5f5e393346505a94390d439428660b36, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.075
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513022769112576592, guid: 5f5e393346505a94390d439428660b36, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513022769112576592, guid: 5f5e393346505a94390d439428660b36, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.015253612
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513022769112576592, guid: 5f5e393346505a94390d439428660b36, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.9412145
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513022769112576592, guid: 5f5e393346505a94390d439428660b36, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.32253578
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513022769112576592, guid: 5f5e393346505a94390d439428660b36, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.09926349
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513022769112576592, guid: 5f5e393346505a94390d439428660b36, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 177.976
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513022769112576592, guid: 5f5e393346505a94390d439428660b36, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 11.350998
+      objectReference: {fileID: 0}
+    - target: {fileID: 3513022769112576592, guid: 5f5e393346505a94390d439428660b36, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -37.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 4554022199616424478, guid: 5f5e393346505a94390d439428660b36, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6728201531576731655, guid: 5f5e393346505a94390d439428660b36, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7550059444251140084, guid: 5f5e393346505a94390d439428660b36, type: 3}
+      propertyPath: m_Name
+      value: GlowStick
+      objectReference: {fileID: 0}
+    - target: {fileID: 7550059444251140084, guid: 5f5e393346505a94390d439428660b36, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5f5e393346505a94390d439428660b36, type: 3}
+--- !u!1 &1219999604995804911 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7550059444251140084, guid: 5f5e393346505a94390d439428660b36, type: 3}
+  m_PrefabInstance: {fileID: 8658588361344700699}
   m_PrefabAsset: {fileID: 0}
