@@ -8689,7 +8689,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh255358
+  m_Name: pb_Mesh64382
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -49054,7 +49054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca7ae625ca3ca324aa3bedac40d521b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsPerSecond: 5
+  pointsPerSecond: 500
   beginDarkening: 100
   completeDarkness: 500
   extraDifficulty: 1000
