@@ -30,7 +30,7 @@ public class Enemies : MonoBehaviour
         lobTrans = gameObject.GetComponent<Transform>();
 
         // Giver lobsters tilfældig størrelse når de spawner
-        float newSize = Random.Range(0.75f - sizeVariance, 0.75f + sizeVariance);
+        float newSize = Random.Range(1f - sizeVariance, 1f + sizeVariance);
         transform.localScale = new Vector3(newSize, newSize, newSize);
 
         // Sets a random movement speed between min and max
@@ -89,14 +89,14 @@ public class Enemies : MonoBehaviour
         if (moveRight)
         {
             // Sets rotation to make lobster look right
-            lobTrans.rotation = Quaternion.Euler(0, 180, 90);
+            lobTrans.rotation = Quaternion.Euler(0, 180, transform.localRotation.eulerAngles.z);
             // Makes lobster move right
             lobsterRB.velocity = new Vector3(moveSpeed, 0, 0);
         }
         else
         {
             // Same as above, just left
-            lobTrans.rotation = Quaternion.Euler(0, 0, 90);
+            lobTrans.rotation = Quaternion.Euler(0, 0, transform.localRotation.eulerAngles.z);
             lobsterRB.velocity = new Vector3(-moveSpeed, 0, 0);
         }
     }

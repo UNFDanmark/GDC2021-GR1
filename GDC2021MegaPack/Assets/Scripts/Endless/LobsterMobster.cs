@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class LobsterMobster : MonoBehaviour
 {
-    public GameObject lobster;
+    public GameObject fish;
+
+    public GameObject ogLobster;
 
     private Transform myTrans;
 
@@ -58,7 +60,6 @@ public class LobsterMobster : MonoBehaviour
         int wallNum = Random.Range(0, walls.Length);
         */
 
-
         if (ScoreHandler.summonTheMobster)
         {
             minWait = 3f;
@@ -75,7 +76,16 @@ public class LobsterMobster : MonoBehaviour
             }
         }
 
-        // Spawns the next wall
-        GameObject myLobster = Instantiate(lobster, new Vector3(0, -10, 0), myTrans.rotation);
+        // Spawns the next lobster
+
+        if (Random.value < 0.01f)
+        {
+            Instantiate(ogLobster, new Vector3(0, -10, 0), myTrans.rotation);
+            print("LOBSTER TIME!");
+        }
+        else
+        {
+            Instantiate(fish, new Vector3(0, -10, 0), myTrans.rotation);
+        }
     }
 }
