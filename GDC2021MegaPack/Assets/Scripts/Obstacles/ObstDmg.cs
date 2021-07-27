@@ -37,7 +37,7 @@ public class ObstDmg : MonoBehaviour
                 // Fort�ller playerHealth at den skal tage skade
                 collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(dmgAmount);
 
-                // Fort�ller rigidbody at vi eksplodere (BOOOOM!)
+                // Fort�ller rigidbody at vi eksploderer (BOOOOM!)
                 collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(explosionPower, gameObject.GetComponent<Transform>().position, explosionRadius);
                 if (destroyOnHit)
                 {

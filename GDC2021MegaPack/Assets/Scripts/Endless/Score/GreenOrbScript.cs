@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemies : MonoBehaviour
+public class GreenOrbScript : MonoBehaviour
 {
-    private Rigidbody lobsterRB;
-    private Transform lobTrans;
+    private Rigidbody ballRB;
+
+    public string thingsToBoost = "Player";
+
+    public AudioSource dam_audio;
 
     public Transform laserSpawn;
 
-    public float minSpeed = 1f;
-    public float maxSpeed = 1.5f;
-
-    private float moveSpeed = 1.25f;
+    private float moveSpeed = 1.5f;
 
     public float seeForwardDistance = 0.5f;
 
@@ -20,32 +20,35 @@ public class Enemies : MonoBehaviour
 
     private bool moveRight = true;
 
-    public float sizeVariance = 0.2f;
 
     // Start is called before the first frame update
     void Start()
     {
-        // Gets the rigidbody and transform components
-        lobsterRB = gameObject.GetComponent<Rigidbody>();
-        lobTrans = gameObject.GetComponent<Transform>();
-
-        // Giver lobsters tilfældig størrelse når de spawner
-        float newSize = Random.Range(1f - sizeVariance, 1f + sizeVariance);
-        transform.localScale = new Vector3(newSize, newSize, newSize);
-
-        // Increaser min-speed når spillet er sværere
-        if (ScoreHandler.gameGetHarder)
-        {
-            minSpeed += 1f;
-            maxSpeed += 1f;
-        }
-
-        // Sets a random movement speed between min and max
-        moveSpeed = Random.Range(minSpeed, maxSpeed);
+        // Definerer Rigidbody
+        ballRB = gameObject.GetComponent<Rigidbody>();
 
         // Chooses a random way to go
         int moveWay = Random.Range(0, 2);
         moveRight = moveWay == 1;
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        // Tjekker om det den collider med's tag er en player
+        if (collision.gameObject.tag == thingsToBoost)
+        {
+            // Forteller scoreTracker at scoren skal increase hurtigere
+            GameObject.FindGameObjectWithTag("ScoreTracker").GetComponent<ScoreHandler>().pointsPerSecond += 0.5f;
+
+            // Disables children and plays SFX
+            foreach (Transform child in transform)
+                child.gameObject.SetActive(false);
+
+            dam_audio.Play();
+
+            //Destroy when audioclip is done
+            Destroy(gameObject, dam_audio.clip.length);
+        }
     }
 
     void FixedUpdate()
@@ -74,16 +77,13 @@ public class Enemies : MonoBehaviour
 
         if (moveRight)
         {
-            // Sets rotation to make lobster look right
-            lobTrans.rotation = Quaternion.Euler(0, 180, transform.localRotation.eulerAngles.z);
             // Makes lobster move right
-            lobsterRB.velocity = new Vector3(moveSpeed, 0, 0);
+            ballRB.velocity = new Vector3(moveSpeed, 0, 0);
         }
         else
         {
             // Same as above, just left
-            lobTrans.rotation = Quaternion.Euler(0, 0, transform.localRotation.eulerAngles.z);
-            lobsterRB.velocity = new Vector3(-moveSpeed, 0, 0);
+            ballRB.velocity = new Vector3(-moveSpeed, 0, 0);
         }
     }
 }

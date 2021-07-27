@@ -68,7 +68,11 @@ public class LobsterMobster : MonoBehaviour
         {
             minWait = 3f;
             maxWait = 6f;
-        }        
+        }
+        else if (ScoreHandler.isCompletelyDark)
+        {
+            lobsterChance = lateLobsterChance;
+        }
         else if (ScoreHandler.hasBegunDarkening) // Bliver kaldt når mørket er begyndt
         {
             // Får spawntime til at falde lineært indtil vi rammer komplet mørke
