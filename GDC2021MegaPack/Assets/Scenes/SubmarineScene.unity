@@ -8891,8 +8891,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b78483eef3726f443bd70500cf20bc8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonar_speed: 1
-  over360: 0
 --- !u!43 &967621659
 Mesh:
   m_ObjectHideFlags: 0
