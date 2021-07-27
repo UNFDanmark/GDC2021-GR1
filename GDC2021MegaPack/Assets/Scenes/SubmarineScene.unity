@@ -678,7 +678,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 60
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -8121,8 +8121,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723666473}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2, y: 6.3575, z: 1}
-  m_LocalScale: {x: 18, y: 12.715, z: 1}
+  m_LocalPosition: {x: -1.2, y: 7.3575, z: 2}
+  m_LocalScale: {x: 20, y: 14.715, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -8689,7 +8689,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh64382
+  m_Name: pb_Mesh309068
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8892,13 +8892,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonar_speed: 1
+  over360: 0
 --- !u!43 &967621659
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh255220
+  m_Name: pb_Mesh308922
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -49054,7 +49055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca7ae625ca3ca324aa3bedac40d521b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsPerSecond: 500
+  pointsPerSecond: 5
   beginDarkening: 100
   completeDarkness: 500
   extraDifficulty: 1000
