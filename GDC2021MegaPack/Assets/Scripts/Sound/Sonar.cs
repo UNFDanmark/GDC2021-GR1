@@ -48,6 +48,7 @@ public class Sonar : MonoBehaviour
 
         // Makes the vector spin around
         rayVector = new Vector3(Mathf.Cos(Time.time*sonar_speed), Mathf.Sin(Time.time*sonar_speed), 0);
+
         Debug.DrawRay(transform.position, transform.TransformDirection(rayVector), Color.red, radius);
 
         if (Physics.Raycast(transform.position, transform.TransformDirection(rayVector), out hit, radius, layerMask))
