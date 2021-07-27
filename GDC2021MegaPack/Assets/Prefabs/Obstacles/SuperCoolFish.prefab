@@ -169,6 +169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c585f1956a259a439d7eec401daa86c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cuteyMat: {fileID: 2100000, guid: 7d9526b683bb15344b8275ec1339e1eb, type: 2}
+  skinHolder: {fileID: 2150160285942593944}
 --- !u!82 &-804814158697356204
 AudioSource:
   m_ObjectHideFlags: 0
@@ -484,5 +486,10 @@ GameObject:
 --- !u!4 &4362503963739013535 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c829c77b3fbfb8149bc309d691f47f3b, type: 3}
+  m_PrefabInstance: {fileID: 4251401624592361076}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2150160285942593944 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6424696975218040852, guid: c829c77b3fbfb8149bc309d691f47f3b, type: 3}
   m_PrefabInstance: {fileID: 4251401624592361076}
   m_PrefabAsset: {fileID: 0}
