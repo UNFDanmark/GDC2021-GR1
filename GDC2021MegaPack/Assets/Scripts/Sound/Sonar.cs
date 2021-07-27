@@ -8,6 +8,8 @@ public class Sonar : MonoBehaviour
     public AudioClip sonar;
     public float radius;
 
+    public GameObject sonarSender;
+
     // the layer we want to hit, in this case 7, which is enemy
     int layerMask = 1 << 7;
 
@@ -37,8 +39,8 @@ public class Sonar : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.TransformDirection(rayVector), out hit, Mathf.Infinity, layerMask))
         {
             // Is only counted if within radius
-            if(hit.distance < radius)
-                AudioSource.PlayClipAtPoint(sonar, new Vector3(hit.transform.position.x, hit.transform.position.y, 0), 0.7f) ;
+            if (hit.distance < radius)
+                Instantiate(sonarSender, transform.position, transform.rotation);
         }
     }
 

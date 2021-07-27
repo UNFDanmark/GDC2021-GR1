@@ -9,6 +9,7 @@ TagManager:
   - Mine
   - Wall
   - SubCollidor
+  - SonarAlarm
   layers:
   - Default
   - TransparentFX
