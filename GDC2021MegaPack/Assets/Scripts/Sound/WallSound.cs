@@ -28,7 +28,6 @@ public class WallSound : MonoBehaviour
         {
             if (!hit_wall && time_stamp + 2.0f <= Time.time)
             {
-                Debug.Log("arh");
                 wall_source.clip = Hit;
                 wall_source.Play();
                 hit_wall = true;
