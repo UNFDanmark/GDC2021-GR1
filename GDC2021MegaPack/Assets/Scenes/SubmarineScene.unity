@@ -43990,7 +43990,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e618662ed8223644b80cd1842aa653bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fish: {fileID: 4251401625355776778, guid: e451d108b11b2bc43b53cb5427622fe3, type: 3}
+  fishies:
+  - {fileID: 4251401625355776778, guid: e451d108b11b2bc43b53cb5427622fe3, type: 3}
+  - {fileID: 8588448081957042618, guid: 38faec8bf8aaf7044967dce50c0e7060, type: 3}
+  lateLobsterChance: 0.3
   ogLobster: {fileID: 5967318838417695863, guid: 06038f1ec642389458eee7b0947c2ee7, type: 3}
   startMin: 10
   startMax: 16
