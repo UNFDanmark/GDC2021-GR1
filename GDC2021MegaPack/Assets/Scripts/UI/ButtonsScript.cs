@@ -9,7 +9,7 @@ public class ButtonsScript : MonoBehaviour
 
     public void switchToPlayingscene()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("SubmarineScene");
     }
     public void exitGame()
     {
