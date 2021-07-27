@@ -9,7 +9,7 @@ public class ButtonsScript : MonoBehaviour
 
     public void switchToPlayingscene()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 
 }
