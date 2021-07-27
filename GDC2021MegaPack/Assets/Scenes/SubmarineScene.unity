@@ -5486,10 +5486,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6214414787a11d24dba257630f28f17b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonar_speed: 0.5
+  sonar_speed: 1
   sonar: {fileID: 8300000, guid: 52d83652052206246b033b9db5b8a265, type: 3}
   radius: 5
-  sonarSender: {fileID: 0}
+  sonarSender: {fileID: 1632610105041690310, guid: 483439559c9103b4aadf7fba8201f3e0, type: 3}
+  resetLength: 0
 --- !u!1 &195854207
 GameObject:
   m_ObjectHideFlags: 0

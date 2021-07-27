@@ -16,7 +16,10 @@ public class SonarObject : MonoBehaviour
 
         // Finder og tænder for sonar-alarm lyset
         sonarAlarm = GameObject.FindGameObjectWithTag("SonarAlarm");
-        sonarAlarm.SetActive(false);
+        if (sonarAlarm != null)
+        {
+            sonarAlarm.SetActive(false);
+        }
 
         // Starter SonarSending Coroutine
         StartCoroutine(SonarSending());
@@ -28,7 +31,7 @@ public class SonarObject : MonoBehaviour
         // Får sonaren til at vokse mens den eksisterer
         if (donutSonar != null)
         {
-            donutSonar.localScale = donutSonar.localScale + new Vector3(2f, 2f, 2f) * Time.deltaTime;
+            donutSonar.localScale = donutSonar.localScale + new Vector3(3f, 3f, 3f) * Time.deltaTime;
         }
 
         // Sletter objektet når lyden er færdigspillet
@@ -44,7 +47,10 @@ public class SonarObject : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         // Slukker for alarm lyset igen
-        sonarAlarm.SetActive(true);
+        if (sonarAlarm != null)
+        {
+            sonarAlarm.SetActive(true);
+        }
 
         // Venter i et halvt sekund
         yield return new WaitForSeconds(0.5f);
