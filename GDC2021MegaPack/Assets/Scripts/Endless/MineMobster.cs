@@ -53,7 +53,12 @@ public class MineMobster : MonoBehaviour
 
     void SpawnMines()
     {
-        if (ScoreHandler.isCompletelyDark)
+        if (ScoreHandler.gameGetHarder)
+        {
+            minWait = 3f;
+            maxWait = 6f;
+        }
+        else if (ScoreHandler.isCompletelyDark)
         {
             minWait = 4f;
             maxWait = 8f;

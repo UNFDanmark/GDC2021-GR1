@@ -7,7 +7,7 @@ public class Calm_Theme : MonoBehaviour
     public AudioClip calm_1, calm_2, calm_3, overgang, didgerido, deep;
     public AudioSource audio;
 
-    public float originVolume;
+    public float originVolume = 0.05f;
 
     private int PrevNum = 0;
 
@@ -57,7 +57,7 @@ public class Calm_Theme : MonoBehaviour
         //Spil solo didgerido
         else if (ScoreHandler.playerScore > 300 && overgang_has_played && ScoreHandler.playerScore < 300+didgerido.length)
         {
-            audio.volume = 0 + (((ScoreHandler.playerScore - 300.0f) * (6.0f / 10.0f)) / 100.0f);
+            audio.volume = 0 + (((ScoreHandler.playerScore - 300.0f) * (3.6f / 10.0f)) / 100.0f);
             if (!audio.isPlaying)
             {
                 audio.clip = didgerido;
@@ -69,7 +69,7 @@ public class Calm_Theme : MonoBehaviour
 
         else if (play_Deep_theme && !audio.isPlaying)
         {
-            audio.volume = originVolume;
+            audio.volume = 0.15f;
             audio.clip = deep;
             audio.Play();
         }

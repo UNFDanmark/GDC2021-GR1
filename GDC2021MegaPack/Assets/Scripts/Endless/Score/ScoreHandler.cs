@@ -16,6 +16,12 @@ public class ScoreHandler : MonoBehaviour
     public float completeDarkness = 500f;
     public static bool isCompletelyDark = false;
 
+    public float extraDifficulty = 1000f;
+    public static bool gameGetHarder = false;
+
+    public float lobsterDifficulty = 2000f;
+    public static bool summonTheMobster = false;
+
     public static float startDarkValue;
     public static float endDarkValue;
 
@@ -26,6 +32,8 @@ public class ScoreHandler : MonoBehaviour
     {
         startDarkValue = beginDarkening;
         endDarkValue = completeDarkness;
+        extraDifficulty = 2 * completeDarkness;
+        lobsterDifficulty = 2 * extraDifficulty;
 
         // Resetter playerScore
         playerScore = 0f;
@@ -41,5 +49,6 @@ public class ScoreHandler : MonoBehaviour
 
         hasBegunDarkening = playerScore >= beginDarkening;
         isCompletelyDark = playerScore >= completeDarkness;
+        gameGetHarder = playerScore >= extraDifficulty;
     }
 }

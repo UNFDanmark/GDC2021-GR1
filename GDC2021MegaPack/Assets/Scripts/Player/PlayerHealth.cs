@@ -14,6 +14,8 @@ public class PlayerHealth : MonoBehaviour
 
     public GameObject colliderHolder;
 
+    public GameObject[] deathObjects;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -78,6 +80,10 @@ public class PlayerHealth : MonoBehaviour
             yield return null;
         }
 
-        Destroy(gameObject);
+        // Sletter modellen når ubåden dør
+        for (int i = 0; i < deathObjects.Length; i++)
+        {
+            Destroy(deathObjects[i]);
+        }
     }
 }
