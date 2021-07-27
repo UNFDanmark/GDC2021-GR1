@@ -73,7 +73,7 @@ public class MineMobster : MonoBehaviour
 
         // Kaster en ray til højre, som den så får koordinaterne af
         RaycastHit hitRight;
-        Physics.Raycast(transform.position, Vector3.left, out hitRight, 30f, Walls);
+        Physics.Raycast(transform.position, Vector3.right, out hitRight, 30f, Walls);
         Vector3 rightWallPosition = hitRight.point;
 
         // Finder ud af om den så en væg eller ej
