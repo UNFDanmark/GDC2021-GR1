@@ -8543,7 +8543,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &803699023
 RectTransform:
   m_ObjectHideFlags: 0
@@ -49110,7 +49110,7 @@ MonoBehaviour:
   pointsPerSecond: 5
   beginDarkening: 100
   completeDarkness: 500
-  extraDifficulty: 500
+  extraDifficulty: 1000
   lobsterDifficulty: 2000
   scoreTextPro: {fileID: 38073272}
 --- !u!4 &1961066912
@@ -49393,6 +49393,7 @@ MonoBehaviour:
   deathObjects:
   - {fileID: 1246223644}
   - {fileID: 1983958725}
+  - {fileID: 2051049557}
 --- !u!1 &2051049557
 GameObject:
   m_ObjectHideFlags: 0
