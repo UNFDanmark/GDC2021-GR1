@@ -33,6 +33,13 @@ public class Enemies : MonoBehaviour
         float newSize = Random.Range(1f - sizeVariance, 1f + sizeVariance);
         transform.localScale = new Vector3(newSize, newSize, newSize);
 
+        // Increaser min-speed når spillet er sværere
+        if (ScoreHandler.gameGetHarder)
+        {
+            minSpeed += 1f;
+            maxSpeed += 1f;
+        }
+
         // Sets a random movement speed between min and max
         moveSpeed = Random.Range(minSpeed, maxSpeed);
 
@@ -41,27 +48,6 @@ public class Enemies : MonoBehaviour
         moveRight = moveWay == 1;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (ScoreHandler.gameGetHarder)
-        {
-            minSpeed += 1f;
-            maxSpeed += 1f;
-        }
-        /*
-        if (lobTrans.position.x > 8.5f && moveRight)
-        {
-            moveRight = false;
-        } // Opposite of above
-        else if (lobTrans.position.x < -8.5f && !moveRight)
-        {
-            moveRight = true;
-        }
-        */
-    }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         // Laver en retningsvektor mod højre
