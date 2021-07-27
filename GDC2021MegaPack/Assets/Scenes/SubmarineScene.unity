@@ -5356,7 +5356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 175280987}
   - component: {fileID: 175280989}
-  - component: {fileID: 175280988}
+  - component: {fileID: 175280990}
   m_Layer: 3
   m_Name: Sonar
   m_TagString: Untagged
@@ -5378,14 +5378,6 @@ Transform:
   m_Father: {fileID: 984963065}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &175280988
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 175280986}
-  m_Enabled: 1
 --- !u!82 &175280989
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5396,8 +5388,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 52d83652052206246b033b9db5b8a265, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -5482,6 +5474,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &175280990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175280986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6214414787a11d24dba257630f28f17b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sonar_source: {fileID: 175280989}
+  sonar: {fileID: 8300000, guid: 52d83652052206246b033b9db5b8a265, type: 3}
+  radius: 0
 --- !u!1 &195854207
 GameObject:
   m_ObjectHideFlags: 0
