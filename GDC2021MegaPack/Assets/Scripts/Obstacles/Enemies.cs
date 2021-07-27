@@ -89,14 +89,14 @@ public class Enemies : MonoBehaviour
         if (moveRight)
         {
             // Sets rotation to make lobster look right
-            lobTrans.rotation = Quaternion.Euler(0, 180, 90);
+            lobTrans.rotation = Quaternion.Euler(0, 180, transform.localRotation.eulerAngles.z);
             // Makes lobster move right
             lobsterRB.velocity = new Vector3(moveSpeed, 0, 0);
         }
         else
         {
             // Same as above, just left
-            lobTrans.rotation = Quaternion.Euler(0, 0, 90);
+            lobTrans.rotation = Quaternion.Euler(0, 0, transform.localRotation.eulerAngles.z);
             lobsterRB.velocity = new Vector3(-moveSpeed, 0, 0);
         }
     }
