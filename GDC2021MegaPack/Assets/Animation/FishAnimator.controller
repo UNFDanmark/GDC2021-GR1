@@ -32,8 +32,8 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: 7560182629518148025}
-    m_Position: {x: 284.55795, y: 85.69387, z: 0}
+    m_State: {fileID: 7587892519391046978}
+    m_Position: {x: 280, y: 100, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -43,15 +43,15 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 7560182629518148025}
---- !u!1102 &7560182629518148025
+  m_DefaultState: {fileID: 7587892519391046978}
+--- !u!1102 &7587892519391046978
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Swim
+  m_Name: Move
   m_Speed: 2
   m_CycleOffset: 0
   m_Transitions: []
@@ -64,7 +64,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 5414490534771693905, guid: c829c77b3fbfb8149bc309d691f47f3b, type: 3}
+  m_Motion: {fileID: 1358262452650834379, guid: 49bacb0d5caed3d4a8fb294fc5006cc7, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
