@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class LobsterMobster : MonoBehaviour
 {
-    public GameObject fish;
+    public GameObject[] fishies;
+
+    private float lobsterChance = 1f;
+
+    public float lateLobsterChance = 0.3f;
 
     public GameObject ogLobster;
 
@@ -85,7 +89,14 @@ public class LobsterMobster : MonoBehaviour
         }
         else
         {
-            Instantiate(fish, new Vector3(0, -10, 0), myTrans.rotation);
+            if (Random.value < lobsterChance)
+            {
+                Instantiate(fishies[1], new Vector3(0, -10, 0), myTrans.rotation);
+            }
+            else
+            {
+                Instantiate(fishies[0], new Vector3(0, -10, 0), myTrans.rotation);
+            }
         }
     }
 }
