@@ -7,19 +7,10 @@ public class SonarObject : MonoBehaviour
     public Transform donutSonar;
     private AudioSource myAudioSource;
 
-    private GameObject sonarAlarm;
-
     // Start is called before the first frame update
     void Start()
     {
         myAudioSource = GetComponent<AudioSource>();
-
-        // Finder og tænder for sonar-alarm lyset
-        sonarAlarm = GameObject.FindGameObjectWithTag("SonarAlarm");
-        if (sonarAlarm != null)
-        {
-            sonarAlarm.SetActive(false);
-        }
 
         // Starter SonarSending Coroutine
         StartCoroutine(SonarSending());
@@ -43,17 +34,8 @@ public class SonarObject : MonoBehaviour
 
     public IEnumerator SonarSending()
     {
-        // Venter i et halvt sekund
-        yield return new WaitForSeconds(0.5f);
-
-        // Slukker for alarm lyset igen
-        if (sonarAlarm != null)
-        {
-            sonarAlarm.SetActive(true);
-        }
-
-        // Venter i et halvt sekund
-        yield return new WaitForSeconds(0.5f);
+        // Venter i et sekund
+        yield return new WaitForSeconds(1f);
 
         // Fjerner sonaren i verdenen
         Destroy(donutSonar.gameObject);
