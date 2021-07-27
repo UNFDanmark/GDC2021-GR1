@@ -30,7 +30,7 @@ public class Enemies : MonoBehaviour
         lobTrans = gameObject.GetComponent<Transform>();
 
         // Giver lobsters tilfældig størrelse når de spawner
-        float newSize = Random.Range(0.75f - sizeVariance, 0.75f + sizeVariance);
+        float newSize = Random.Range(1f - sizeVariance, 1f + sizeVariance);
         transform.localScale = new Vector3(newSize, newSize, newSize);
 
         // Sets a random movement speed between min and max
