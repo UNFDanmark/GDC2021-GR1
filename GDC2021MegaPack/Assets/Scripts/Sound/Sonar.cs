@@ -26,11 +26,12 @@ public class Sonar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Giver 1 sekunds cooldown før man kan ramme samme fisk igen
         if (resetLength < 0)
         {
             resetLength -= Time.deltaTime;
         }
-        else if (resetLength == 0)
+        else if (resetLength <= 0 && resetLength > -1f)
         {
             lastHit = null;
             resetLength = -1f;
