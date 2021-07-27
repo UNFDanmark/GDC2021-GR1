@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: -2307818020753025530}
   - component: {fileID: 2174071178991511592}
   - component: {fileID: 4477551184232009777}
+  - component: {fileID: 1786781609998576183}
   - component: {fileID: -804814158697356204}
   - component: {fileID: 790436828}
   m_Layer: 7
@@ -156,6 +157,18 @@ MonoBehaviour:
   minSpeed: 0.25
   maxSpeed: 0.6
   moveUpSpeed: 0.5
+--- !u!114 &1786781609998576183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4251401625355776778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c585f1956a259a439d7eec401daa86c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &-804814158697356204
 AudioSource:
   m_ObjectHideFlags: 0
@@ -456,7 +469,7 @@ PrefabInstance:
     - target: {fileID: 7313284611051153516, guid: c829c77b3fbfb8149bc309d691f47f3b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3bcc04f878dd14d49abb6c3898e5c2a3, type: 2}
+      objectReference: {fileID: 2100000, guid: 7f6c6787b3a47ba4da422a75395604ce, type: 2}
     - target: {fileID: 8150905297709394577, guid: c829c77b3fbfb8149bc309d691f47f3b, type: 3}
       propertyPath: m_Layer
       value: 7
