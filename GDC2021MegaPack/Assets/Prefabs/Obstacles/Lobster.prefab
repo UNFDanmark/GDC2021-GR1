@@ -172,6 +172,7 @@ MonoBehaviour:
   onlyWalls:
     serializedVersion: 2
     m_Bits: 64
+  sizeVariance: 0.1
 --- !u!114 &4306239582589078827
 MonoBehaviour:
   m_ObjectHideFlags: 0
