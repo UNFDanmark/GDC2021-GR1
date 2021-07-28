@@ -69,7 +69,7 @@ MonoBehaviour:
   seeForwardDistance: 0.5
   onlyWalls:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
 --- !u!54 &5765958116637954948
 Rigidbody:
   m_ObjectHideFlags: 0
