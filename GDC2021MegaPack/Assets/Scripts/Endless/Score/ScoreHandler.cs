@@ -28,7 +28,7 @@ public class ScoreHandler : MonoBehaviour
     public TMP_Text scoreTextPro;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         startDarkValue = beginDarkening;
         endDarkValue = completeDarkness;
@@ -37,6 +37,11 @@ public class ScoreHandler : MonoBehaviour
 
         // Resetter playerScore
         playerScore = 0f;
+
+        // Resetter variabler i forhold til nye score
+        hasBegunDarkening = playerScore >= beginDarkening;
+        isCompletelyDark = playerScore >= completeDarkness;
+        gameGetHarder = playerScore >= extraDifficulty;
     }
 
     // Update is called once per frame
