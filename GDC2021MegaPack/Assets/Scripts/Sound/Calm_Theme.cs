@@ -12,7 +12,7 @@ public class Calm_Theme : MonoBehaviour
     private int PrevNum = 0;
 
     bool overgang_has_played = false;
-    bool didgerido_has_played = false;
+    public bool didgerido_has_played = false;
 
     public bool play_Deep_theme = false;
 
@@ -48,6 +48,7 @@ public class Calm_Theme : MonoBehaviour
         //Play overgang
         else if (!audio.isPlaying && !overgang_has_played)
         {
+            audio.volume = originVolume - 0.02f;
             PrevNum = 0;
             audio.clip = overgang;
             audio.Play();
@@ -69,7 +70,8 @@ public class Calm_Theme : MonoBehaviour
 
         else if (play_Deep_theme && !audio.isPlaying)
         {
-            audio.volume = 0.15f;
+            didgerido_has_played = true;
+            audio.volume = 0.05f;
             audio.clip = deep;
             audio.Play();
         }
