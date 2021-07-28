@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5765958116637954949}
   - component: {fileID: 5765958116637954948}
   - component: {fileID: 5765958116637954951}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GreenOrb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 5765958117434456427}
   - component: {fileID: 5765958117434456426}
   - component: {fileID: 5765958117434456425}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: OrbVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,7 +286,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5765958117712936436}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: OrbLaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
