@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1097401334386993598}
   - component: {fileID: 1531190411238620493}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4283782491184611317}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LobsterLaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4356999191287248995}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.002, y: 0, z: 0}
+  m_LocalPosition: {x: -0.893, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1214179044619998261}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 3598463919337454313}
   - component: {fileID: 5149919983506953668}
   - component: {fileID: 4525038612873227767}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LobsterLad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -365,9 +365,53 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7884308149246209230, guid: de9c5b41f421d5a4b8a2cfd6eef9171b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -7080476283249816269, guid: de9c5b41f421d5a4b8a2cfd6eef9171b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -6424696975218040852, guid: de9c5b41f421d5a4b8a2cfd6eef9171b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2104649381683797255, guid: de9c5b41f421d5a4b8a2cfd6eef9171b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -316993574215273127, guid: de9c5b41f421d5a4b8a2cfd6eef9171b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -38621603145786519, guid: de9c5b41f421d5a4b8a2cfd6eef9171b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: de9c5b41f421d5a4b8a2cfd6eef9171b, type: 3}
       propertyPath: m_Name
       value: hummeranimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de9c5b41f421d5a4b8a2cfd6eef9171b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1670805411799936188, guid: de9c5b41f421d5a4b8a2cfd6eef9171b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2234638374124979267, guid: de9c5b41f421d5a4b8a2cfd6eef9171b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3079568543077469580, guid: de9c5b41f421d5a4b8a2cfd6eef9171b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6866880679909356167, guid: de9c5b41f421d5a4b8a2cfd6eef9171b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7313284611051153516, guid: de9c5b41f421d5a4b8a2cfd6eef9171b, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -392,6 +436,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1214179044619998261}
     m_Modifications:
+    - target: {fileID: 698653901220858290, guid: 5f5e393346505a94390d439428660b36, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 928360400514639323, guid: 5f5e393346505a94390d439428660b36, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -493,8 +541,20 @@ PrefabInstance:
       value: GlowStick
       objectReference: {fileID: 0}
     - target: {fileID: 7550059444251140084, guid: 5f5e393346505a94390d439428660b36, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7550059444251140084, guid: 5f5e393346505a94390d439428660b36, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660766649069724275, guid: 5f5e393346505a94390d439428660b36, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7727869501807016942, guid: 5f5e393346505a94390d439428660b36, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5e393346505a94390d439428660b36, type: 3}
