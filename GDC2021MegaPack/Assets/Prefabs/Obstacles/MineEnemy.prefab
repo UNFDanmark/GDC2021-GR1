@@ -70,6 +70,7 @@ MonoBehaviour:
   thingsToAttack:
   - Player
   dam_audio: {fileID: 2515968808441098416}
+  explosionParticle: {fileID: 1157210053474737784, guid: 81288a8011fa29a4899bf6fcd9b004b2, type: 3}
 --- !u!114 &6975918098809587518
 MonoBehaviour:
   m_ObjectHideFlags: 0

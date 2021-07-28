@@ -17,6 +17,8 @@ public class ObstDmg : MonoBehaviour
 
     public AudioSource dam_audio;
 
+    public GameObject explosionParticle;
+
 
     // Start is called before the first frame update
     void Start()
@@ -41,10 +43,15 @@ public class ObstDmg : MonoBehaviour
                 collision.gameObject.GetComponent<Rigidbody>().AddExplosionForce(explosionPower, gameObject.GetComponent<Transform>().position, explosionRadius);
                 if (destroyOnHit)
                 {
-                   
-
                     foreach (Transform child in transform)
+                    {
                         child.gameObject.SetActive(false);
+                    }
+
+                    if (explosionParticle != null)
+                    {
+                        Instantiate(explosionParticle, transform.position, Quaternion.identity);
+                    }
 
                     dam_audio.Play();
 
