@@ -35,3 +35,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+GDC2021MegaPack/Assets/Editor/WebGLBuilder.cs
+GDC2021MegaPack/Assets/Editor/WebGLBuilder.cs.meta
