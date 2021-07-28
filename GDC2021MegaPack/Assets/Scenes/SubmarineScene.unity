@@ -446,7 +446,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12.85
+  m_fontSize: 11.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8706,7 +8706,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.438
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8806,7 +8806,7 @@ MonoBehaviour:
   ambient_1: {fileID: 8300000, guid: 0e1332fd6c0eac946824125a5458109a, type: 3}
   ambient_2: {fileID: 8300000, guid: 7ea71d85509c94b439f178d318a4c853, type: 3}
   ambient_3: {fileID: 8300000, guid: afed98e5ad886f643a6289f012329c45, type: 3}
-  ambient_4: {fileID: 8300000, guid: 52d83652052206246b033b9db5b8a265, type: 3}
+  ambient_4: {fileID: 8300000, guid: 96b8a68ff1cecff4d93d695b775cb3a0, type: 3}
 --- !u!43 &867982091
 Mesh:
   m_ObjectHideFlags: 0
@@ -9292,6 +9292,7 @@ MonoBehaviour:
   deep: {fileID: 8300000, guid: 555ee27dead70284ab7ad02c6e2f29b8, type: 3}
   audio: {fileID: 984963067}
   originVolume: 0.05
+  didgerido_has_played: 0
   play_Deep_theme: 0
 --- !u!82 &984963067
 AudioSource:
@@ -44824,8 +44825,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wall_source: {fileID: 2024724391}
-  Hit: {fileID: 8300000, guid: dcaf7fbe635129343b76d8e648dc0fc5, type: 3}
-  Scrape: {fileID: 8300000, guid: 87f606705b0cbae41a315a31fd4d5c00, type: 3}
+  Hit: {fileID: 8300000, guid: 294a0b1e02f0d644ea0ed96306ac647f, type: 3}
+  Scrape: {fileID: 8300000, guid: e131fde5d1264ab47834f6a33b72e510, type: 3}
+  hit_vol: 0.02
+  scrape_vol: 1
 --- !u!1 &2051049557
 GameObject:
   m_ObjectHideFlags: 0
