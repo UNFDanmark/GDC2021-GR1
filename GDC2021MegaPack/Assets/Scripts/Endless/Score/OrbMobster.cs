@@ -7,7 +7,7 @@ public class OrbMobster : MonoBehaviour
     public float minWait = 60f;
     public float maxWait = 70f;
 
-    private float waitLength;
+    private float waitLength = 60f;
 
     public GameObject greenOrb;
 
