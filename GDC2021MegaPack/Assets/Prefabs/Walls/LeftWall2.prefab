@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1228292578146617765}
   - component: {fileID: 3879231411016665220}
   - component: {fileID: 6971977340756961532}
+  - component: {fileID: 7077618236818474983}
   m_Layer: 6
   m_Name: LeftWall2
   m_TagString: Untagged
@@ -64,6 +65,21 @@ MonoBehaviour:
   walls:
   - {fileID: 1228292578146617764}
   - {fileID: 1228292578146617764, guid: 3fc0b47c31313d941a43f9de8392d070, type: 3}
+--- !u!114 &7077618236818474983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228292578146617764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c585f1956a259a439d7eec401daa86c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cuteChance: 0.5
+  cuteyMat: {fileID: 2100000, guid: fb4d43ce1c30fab479c94b09286eff55, type: 2}
+  skinHolder: {fileID: 5329861248146332206}
 --- !u!1 &1228292578405962303
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,6 +361,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6cb78af3358a92a4db04727e417ac787, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59a14ea2cd15e264ba8fcbfe5d2fe209, type: 2}
     - target: {fileID: 919132149155446097, guid: 6cb78af3358a92a4db04727e417ac787, type: 3}
       propertyPath: m_Name
       value: mur2
