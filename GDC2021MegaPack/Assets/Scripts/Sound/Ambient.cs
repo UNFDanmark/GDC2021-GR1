@@ -21,10 +21,10 @@ public class Ambient : MonoBehaviour
     void Update()
     {
         Calm_Theme Calm_script = transform.parent.GetComponent<Calm_Theme>();
-        if (!ambient_audioSource.isPlaying && Calm_script.play_Deep_theme) 
+        if (!ambient_audioSource.isPlaying && Calm_script.didgerido_has_played) 
         {
             StartCoroutine(wait_random_time());
-            switch (Get_Random_Number(1, 4))
+            switch (Get_Random_Number(2, 4))
             {
                 case 1:
                     ambient_audioSource.clip = ambient_1;
@@ -54,7 +54,7 @@ public class Ambient : MonoBehaviour
     int Get_Random_Number(int a, int b)
     {
         int ReturnInt;
-        ReturnInt = Random.Range(a, b);
+        ReturnInt = Random.Range(a, b+1);
 
         //Makes sure the number is not the same as last
         if (ReturnInt == PrevNum)
