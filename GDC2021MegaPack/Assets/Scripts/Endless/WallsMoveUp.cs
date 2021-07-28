@@ -17,7 +17,7 @@ public class WallsMoveUp : MonoBehaviour
         myTransform = gameObject.GetComponent<Transform>();
 
         // Moves wall half its height down
-        myTransform.position -= new Vector3(0, myTransform.localScale.y / 2, 0);
+        myTransform.position -= new Vector3(0f, myTransform.localScale.y / 2, 0f);
     }
 
     // Update is called once per frame
