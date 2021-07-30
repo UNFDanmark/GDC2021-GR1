@@ -3,20 +3,27 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - GameManager
+  - Lobster
+  - Mine
+  - Wall
+  - SubCollidor
+  - SonarAlarm
+  - ScoreTracker
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Sub
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Walls
+  - Enemy
+  - Invulnerable
+  - LightVisual
+  - InvisWalls
+  - Orb
   - 
   - 
   - 

@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/Tittlescreen.unity
+    guid: a0f8c12626bfddf4983913e465b904e9
+  - enabled: 1
+    path: Assets/Scenes/SubmarineScene.unity
+    guid: 9e0c09b528676f74db934ef464ae1e3c
+  - enabled: 1
+    path: Assets/Scenes/PauseMenu.unity
+    guid: baffbf161732b5545a38d36cf67bfc1c
+  - enabled: 1
+    path: Assets/Scenes/GameOverMenu.unity
+    guid: 8a9a6cfa483edd444b60db4d9d15d7d0
   m_configObjects: {}

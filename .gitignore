@@ -5,6 +5,7 @@
 [Bb]uild/
 [Bb]uilds/
 .vs/
+[Ll]ogs/
 Assets/AssetStoreTools*
 
 # Visual Studio 2015 cache directory
@@ -34,3 +35,6 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+GDC2021MegaPack/Assets/Editor/WebGLBuilder.cs
+GDC2021MegaPack/Assets/Editor/WebGLBuilder.cs.meta
+GDC2021MegaPack/Assets/Editor.meta
